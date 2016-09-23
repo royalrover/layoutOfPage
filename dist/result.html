@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=375" />
+    <link rel="dns-prefetch" href="http://cdn1.showjoy.com">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <link rel="apple-touch-icon" href="http://cdn1.showjoy.com/images/10/10d9270e34a640db804a8f6f453df597.png">
+    <meta name="apple-mobile-web-app-title" content="尚妆">
+    <meta name="keywords" content="" />
+    <meta name="description" content=""/>
+    <meta name="alexaVerifyID" content="CQ9MFqujDWRsB8dm3rfIrhLYva0" />
+    <link rel="stylesheet" type="text/css" href="http://cdn1.showjoy.com/assets/f2e/joyf2e/vendor/0.0.2/gmu/reset.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdn1.showjoy.com/assets/f2e/joyf2e/vendor/0.0.2/gmu/gmu.min.css" />
+    <link href="http://cdn1.showjoy.com/assets/f2e/showjoy-assets/common-m/0.0.6.2/m-header/m-header.css" rel="stylesheet" />
+    <link href="http://cdn1.showjoy.com/assets/f2e/showjoy-assets/common-m/0.0.6.2/m-footer/m-footer.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="http://cdn1.showjoy.com/assets/f2e/joyf2e/vendor/0.0.2/gmu/zepto.min.js"></script>
+    <script type="text/javascript" src="http://cdn1.showjoy.com/assets/f2e/joyf2e/vendor/0.0.2/gmu/gmu.min.js"></script>
+    <script src="http://cdn1.showjoy.com/assets/f2e/showjoy-assets/common-m/0.0.6.2/m-header/m-header.min.js" type="text/javascript"></script>
+    <link href="http://cdn1.showjoy.com/assets/f2e/showjoy-assets/market-m/0.0.14.6/ctopic/ctopic.min.css" rel="stylesheet" />
+    <title>  </title>
+    <style>
+        .box>a, .box>span, .box>.preview, .box>.editdataAreaContainer{display:none;}
+    </style>
+
+    <script>
+        var u = navigator.userAgent;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
+        if (isAndroid) {
+            $("title").after("<meta name='viewport' content='width=375' />");
+        } else{
+            $("title").after("<meta name='viewport' content='width=375, user-scalable=no' />");
+        }
+    </script>
+</head>
+<body>
+
+{{stub}}
+
+<script src="http://cdn1.showjoy.com/assets/f2e/showjoy-assets/market-m/0.0.14.6/ctopic/ctopic.min.js" type="text/javascript"></script>
+<script>
+    var __showjoyDSP = window.__showjoyDSP || {};
+    (function() {
+        $(window).on('load',function(){
+            var a = document;
+            __showjoyDSP.script = a.createElement('script');
+            __showjoyDSP.script.type = 'text/javascript';
+            __showjoyDSP.script.async = true;
+            if (a && a.location && a.location.protocol && "https:" == a.location.protocol.toString().toLowerCase()) {
+                __showjoyDSP.script.src = "http://market.m.showjoy.com/getImplantJs?url=" + location.href;
+            } else {
+                __showjoyDSP.script.src = "http://market.m.showjoy.com/getImplantJs?url=" + location.href;
+            }
+            var s = a.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(__showjoyDSP.script, s);
+        });
+    })();
+</script>
+
+<script>
+    $.ajax({
+        url:'http://fp.showjoy.com/trace',
+        data: {
+            url: location.href,
+            refer: document.referrer
+        },
+        dataType: 'jsonp'
+    });
+</script>
+
+<script>
+    var fpClickTimer;
+    var fpClickDelay = 200;
+    $(window).on('click',function(ev){
+        if(fpClickTimer){
+            clearTimeout(fpClickTimer);
+        }
+        fpClickTimer = setTimeout(function(){
+            $.ajax({
+                url: 'http://fp.showjoy.com/click',
+                dataType: 'jsonp',
+                data: {
+                    url: location.href,
+                    coordinate: '(' + ev.clientX + ',' + ev.clientY + ')',
+                    resolution: window.screen.width + ',' + window.screen.height
+                }
+            });
+        },fpClickDelay);
+    });
+</script>
+
+<script >
+    var ma = document.createElement('script');
+    ma.type = 'text/javascript';
+    ma.async = true;
+    ma.src = "http://cdn1.showjoy.com/assets/sea-modules/portal/4.40.0/page/doa.js";
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ma, s);
+</script>
+</body>
+</html>

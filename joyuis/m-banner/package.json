@@ -1,0 +1,16 @@
+{
+  "version": "0.0.1",
+  "name": "joyui/m-banner",
+  "dependencies": [
+    {
+      "alias": "fecomponent/mobi-art-template/0.0.3/index",
+      "url": "fecomponent/art-template/raw/publish/0.0.3/index.js"
+    },
+    {
+      "alias": "fecomponent/mobi-jswebview/0.0.17/index",
+      "url": "fecomponent/jswebview/raw/publish/0.0.17/index.js"
+    }
+  ],
+  "labels": "JOYUI",
+  "alias": ""
+}

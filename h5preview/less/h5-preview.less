@@ -1,0 +1,157 @@
+/* css reset*/
+body{
+  margin:0 auto;
+  font-size:14px;
+  line-height: 1.4;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+input,textarea,select{
+  font-size: 100%;
+  font-family: inherit;
+}
+h1,h2,h3,h4,h5,h6,p,ul,ol,form{
+  margin:0;
+}
+h4,h5,h6{
+  font-size: 1em;
+}
+/*image with no-border*/
+img{
+  border: 0;
+}
+ul,ol{
+  list-style: none;
+}
+
+
+.page {
+  width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
+  text-align: center;
+
+  /*button基本样式*/
+  .btn {
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    width: 160px;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid #fff;
+
+    &.active {
+      background-color: #fff;
+      color: #ff85a0;
+    }
+
+    &.deactive {
+      background-color: #ff6688;
+      color: #fff;
+    }
+  }
+  .prev-head {
+    width: 100%;
+    height: 71px;
+    line-height: 71px;
+    text-align: center;
+    background-color: #ff6688;
+
+    .h5-prev-btn {
+      margin-left: 10px;
+    }
+
+  }
+
+  .prev-body {
+    width: 890px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 110px;
+    background-color: #fff;
+
+    .prevshow-wrapper {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 90px;
+      padding: 0;
+      width: 433px;
+      height: 884px;
+      background: url(http://gtms02.alicdn.com/tps/i2/TB1EcmDGFXXXXXLXVXXK6Ax3pXX-433-884.png) no-repeat center center;
+      text-align: left;
+
+      /*手机导航栏*/
+      .prev-nav {
+        position: absolute;
+        left: 29px;
+        top: 142px;
+        width: 374px;
+        height: 44px;
+        background-color: #fff;
+        text-align: center;
+
+        .nav-back {
+          position: absolute;
+          left: 20px;
+          width: 20px;
+          height: 100%;
+          background: url(http://gtms02.alicdn.com/tps/i2/TB1saRFIFXXXXaVXpXXBbBiFpXX-17-25.jpg) left center no-repeat;
+
+        }
+
+        p{
+          color: #000;
+          height: 44px;
+          line-height: 44px;
+        }
+      }
+      iframe.frame {
+        margin-left: 29px;
+        margin-top: 186px;
+        width: 374px;
+        height: 591px;
+
+      }
+
+    }
+
+    .footer-btn {
+
+      .edit, .publish {
+        width: 200px;
+        height: 45px;
+        border: 1px solid #ff6688;
+        font-size: 18px;
+      }
+
+      .edit {
+        background-color: #fff;
+        color: #ff6688;
+      }
+      .publish {
+        margin-left: 10px;
+        background-color: #ff6688;
+        color: #fff;
+      }
+    }
+
+  }
+}

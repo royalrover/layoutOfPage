@@ -1,0 +1,10 @@
+      {{each list as value index}}
+        <div class="ui-slider-item">
+            <a href="{{value.href}}">
+              <img src="{{value.pic}}" alt="{{value.description}}">
+            </a>
+            {{if value.title}}
+              <p>{{value.title}}</p>
+            {{/if}}
+        </div>
+      {{/each}}

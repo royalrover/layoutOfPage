@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="layoutit bootstrap3" />
+<meta name="description" content="可视化搭建平台，基于JOYUI模块" />
+<meta name="language" content="en" />
+<!--<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>-->
+<title>ShowJoy可视化搭建平台</title>
+<link href="skin/css/bootstrap.min.css" rel="stylesheet">
+<link href="skin/css/layoutit.css" rel="stylesheet">
+<link href="skin/css/default.css" rel="stylesheet">
+<link href="skin/css/base.css" rel="stylesheet">
+<link href="skin/css/list.css" rel="stylesheet">
+<link href="skin/css/content.css" rel="stylesheet">
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="skin/js/html5shiv.js"></script>
+<![endif]-->
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="skin/img/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="skin/img/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="skin/img/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="skin/img/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="">
+
+<script type="text/javascript" src="http://cdn1.showjoy.com/assets/f2e/joyf2e/vendor/0.0.2/gmu/zepto.min.js"></script>
+
+<script type="text/javascript" src="skin/js/jquery.min.js"></script>
+<script type="text/javascript" src="skin/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="skin/js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="skin/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="skin/js/jquery.htmlClean.js"></script>
+<script src="skin/js/art-template.js"></script>
+<script type="text/javascript" src="skin/js/scripts.min.js"></script>
+
+</head>
+<body class="edit">
+	<div class="navbar navbar-inverse navbar-fixed-top navbar-layoutit">
+    <div class="navbar-header">
+      <button data-target="navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+        <span class="glyphicon-bar"></span>
+        <span class="glyphicon-bar"></span>
+        <span class="glyphicon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://www.uades.com">可视化搭建平台<span class="label label-default">BETA</span></a>
+    </div>
+    <div class="collapse navbar-collapse">
+      
+      <ul class="nav" id="menu-layoutit">
+		  <!--<a href="./h5preview/page/h5preview.html" target="_blank">预览</a>-->
+        <li>
+          <div class="btn-group" data-toggle="buttons-radio">
+            <button type="button" id="edit" class="active btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit "></i> 编辑</button>
+            <!--<button type="button" class="btn btn-xs btn-primary" id="devpreview"><i class="glyphicon-eye-close glyphicon"></i> 布局编辑</button>-->
+		    <button type="button" class="btn btn-xs btn-primary j_preview"><i class="glyphicon-eye-open glyphicon"></i> 预览</button>
+
+          </div>
+          <div class="btn-group">	
+            <!--<button type="button" class="btn btn-xs btn-primary" id="button-download-modal" data-target="#downloadModal" href="template/download.html" role="button" data-toggle="modal"><i class="glyphicon-chevron-down glyphicon"></i> 源码</button>-->
+            <button class="btn btn-xs btn-primary" id="button-share-modal" ><i class="glyphicon-share glyphicon"></i> 保存</button>
+			  <button class="btn btn-xs btn-primary" id="download" ><i class="glyphicon-cloud-download glyphicon"></i> 下载</button>
+            <button class="btn btn-xs btn-primary" id="publish" ><i class="glyphicon-cloud-upload glyphicon"></i> 发布</button>
+          </div>
+			<div class="btn-group">
+				<button class="btn btn-xs btn-primary" id="clear" ><i class="glyphicon-trash glyphicon"></i> 清空</button>
+			</div>
+        </li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+	</div><!--/.navbar-fixed-top -->
+	
+	<div class="container">
+		<div class="row">
+	<div class="">
+		<div class="sidebar-nav">
+			
+<ul class="nav nav-list accordion-group">
+<li class="nav-header">
+  布局设置
+ <div class="pull-right popover-info"><i class="glyphicon glyphicon-question-sign"></i> 
+ <div class="popover fade right"><div class="arrow"></div> 
+ 	<h3 class="popover-title">提示：</h3> 
+ 	<div class="popover-content">在这里设置网站的布局, 包含多种排版形式，可任意组合多种不同的排版布局风格。 </div></div> 
+ </div> 
+</li>
+<li class="rows" id="estRows">
+
+
+<div class="lyrow">
+
+	<a href="javascript:void 0;" class="remove label label-danger"><i class="glyphicon-remove glyphicon"></i> 删除</a>
+	<span class="drag label label-default"><i class="glyphicon glyphicon-move"></i> 拖动</span>
+	<div class="preview"><input type="text" value="12" class="form-control"></div>
+	<div class="view">
+		<div class="row clearfix">
+			<div class="col-md-12 column"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="lyrow">
+	<a href="javascript:void 0;" class="remove label label-danger"><i class="glyphicon-remove glyphicon"></i> 删除</a>
+	<span class="drag label label-default"><i class="glyphicon glyphicon-move"></i> 拖动</span>
+	<div class="preview"><input type="text" value="6 6" class="form-control"></div>
+	<div class="view">
+		<div class="row clearfix">
+			<div class="col-md-6 column"></div>
+			<div class="col-md-6 column"></div>
+		</div>
+	</div>
+</div>
+
+
+<div class="lyrow">
+	<a href="javascript:void 0;" class="remove label label-danger"><i class="glyphicon-remove glyphicon"></i> 删除</a>
+	<span class="drag label label-default"><i class="glyphicon glyphicon-move"></i> 拖动</span>
+	<div class="preview"><input type="text" value="9 3" class="form-control"></div>
+	<div class="view">
+		<div class="row clearfix">
+			<div class="col-md-9 column"></div>
+			<div class="col-md-3 column"></div>
+		</div>
+	</div>
+</div>
+
+
+<div class="lyrow">
+	<a href="javascript:void 0;" class="remove label label-danger"><i class="glyphicon-remove glyphicon"></i> 删除</a>
+	<span class="drag label label-default"><i class="glyphicon glyphicon-move"></i> 拖动</span>
+	<div class="preview"><input type="text" value="8 4" class="form-control"></div>
+	<div class="view">
+		<div class="row clearfix">
+			<div class="col-md-8 column"></div>
+			<div class="col-md-4 column"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="lyrow">
+	<a href="javascript:void 0;" class="remove label label-danger"><i class="glyphicon-remove glyphicon"></i> 删除</a>
+	<span class="drag label label-default"><i class="glyphicon glyphicon-move"></i> 拖动</span>
+	<div class="preview"><input type="text" value="4 4 4" class="form-control"></div>
+	<div class="view">
+		<div class="row clearfix">
+			<div class="col-md-4 column"></div>
+			<div class="col-md-4 column"></div>
+			<div class="col-md-4 column"></div>
+		</div>
+	</div>
+</div>
+
+
+<div class="lyrow">
+	<a href="javascript:void 0;" class="remove label label-danger"><i class="glyphicon-remove glyphicon"></i> 删除</a>
+	<span class="drag label label-default"><i class="glyphicon glyphicon-move"></i> 拖动</span>
+	<div class="preview"><input type="text" value="3 9" class="form-control"></div>
+	<div class="view">
+		<div class="row clearfix">
+			<div class="col-sm-3 col-md-3 column"></div>
+			<div class="col-sm-9 col-md-9 column"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="lyrow">
+	<a href="javascript:void 0;" class="remove label label-danger"><i class="glyphicon-remove glyphicon"></i> 删除</a>
+	<span class="drag label label-default"><i class="glyphicon glyphicon-move"></i> 拖动</span>
+	<div class="preview"><input type="text" value="2 6 4" class="form-control"></div>
+	<div class="view">
+		<div class="row clearfix">
+			<div class="col-md-2 column"></div>
+			<div class="col-md-6 column"></div>
+			<div class="col-md-4 column"></div>
+		</div>
+	</div>
+</div>
+
+
+</li>
+<!--</ul>
+
+
+<ul class="nav nav-list accordion-group">-->
+<li class="nav-header"> JOYUI模块 <div class="pull-right popover-info"><i class="glyphicon glyphicon-question-sign "></i>
+ <div class="popover fade right"><div class="arrow"></div>
+ 	<h3 class="popover-title">提示：</h3>
+ 	<div class="popover-content">拖放组件到布局框内，拖入后你可以设置组件样式。</div></div>
+ </div>
+</li>
+
+<li class="boxes" id="elmComponents">
+
+	<script id="joyuis" type="text/html">
+		{{each joyuis as value index}}
+
+		<div class="box box-element" style="height: auto;">
+			<a href="javascript:void 0;" class="editdata label label-default"><i class="glyphicon glyphicon-remove"></i> 编辑</a>
+			<a href="javascript:void 0;" class="remove label label-danger"><i class="glyphicon glyphicon-remove"></i> 删除</a>
+			<span class="drag label label-default"><i class="glyphicon glyphicon-move"></i> 拖动</span>
+			<div class="editdataAreaContainer" >
+				<textarea class="editdataArea"></textarea>
+				<div class="buttons">
+					<button type="button" class="btn btn-success">确定</button>
+					<button type="button" class="btn btn-danger">取消</button>
+				</div>
+			</div>
+
+			<div class="preview">{{value.name}}模块</div>
+			<!--JOYUI模块div包含块-->
+			{{value.template}}
+
+			<!--jQuery中的html方法同步执行script-->
+			{{value.script}}
+		</div>
+
+		{{/each}}
+	</script>
+</li>
+</ul>
+
+
+		</div>
+	</div>
+	<!--内容区域 开始-->
+	<div class="demoTitle">拖拽区</div>
+	<div class="demo">
+	</div>
+	<!--内容区域 结束-->
+	<div id="download-layout">
+		<!-- 可编辑内容区域 开始 -->
+		<div class="container"></div>
+		<!-- 可编辑内容区域 结束 -->
+	</div>
+</div>
+<!--/row-->
+
+	</div><!--/.fluid-container-->
+
+    
+	<div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalLabel" aria-hidden="true"></div>
+	<div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel" aria-hidden="true"></div>
+	<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true"></div>
+</body>
+
+</html>
