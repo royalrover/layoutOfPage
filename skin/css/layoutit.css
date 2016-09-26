@@ -81,7 +81,7 @@ body {
 .boxes:after {clear: both;}
 .sidebar-nav li { line-height:28px; margin-bottom:3px; }
 .sidebar-nav li .lyrow { margin-bottom:5px;}
-.sidebar-nav .box { float: left;line-height:26px; width:155px; margin: 10px; }
+.sidebar-nav .box { float: left;line-height:26px; width:155px; margin: 10px;height:120px; }
 .sidebar-nav .preview { display: block; color:#666; font-size:12px; line-height:26px;}
 .sidebar-nav .preview input { width:150px; padding:0 10px; background:#bbb; font-size:10px; color:#999; line-height:20px; height:20px; position:relative; top:-1px; }
 .sidebar-nav .view { display: none; }
