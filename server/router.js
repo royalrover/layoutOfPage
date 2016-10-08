@@ -45,6 +45,7 @@ router.get('/joyui/getTemplate',function(req,res){
 
 router.post('/joyui/preview',function(req,res){
     var body = req.body.content;
+    var title = req.body.title;
     var previewContent = fs.readFileSync(path.join(cwd,'h5preview/page/mobile.html'),'utf8');
     previewContent = previewContent.replace('{{stub}}',body);
     fs.writeFile(path.join(cwd,'h5preview/page/mobileRendered.html'),previewContent,function(err){
@@ -69,16 +70,17 @@ router.post('/joyui/download',function(req,res){
 
 router.post('/joyui/publish',function(req,res){
     var body = req.body.content;
+    var title = req.body.title;
     var exec = require('child_process').exec;
     var previewContent = fs.readFileSync(path.join(cwd,'dist/result.html'),'utf8');
-    previewContent = previewContent.replace('{{stub}}',body);
+    previewContent = previewContent.replace('{{stub}}',body).replace('{{title}}',title);
     var pathname = path.join(cwd,'h5preview/page/render.html');
     fs.writeFile(pathname,previewContent,function(err){
         if(err){
             res.end(JSON.stringify({success: 0}));
         }else{
-            exec('scp '+pathname+' devuser@192.168.0.221:/usr/local/nginx/html/assets/f2e/activity/');
-            res.end(JSON.stringify({success: 1,url: 'http://assets.showjoy.net/activity/render.html'}));
+            exec('scp '+pathname+' devuser@192.168.0.221:/usr/local/nginx/html/assets/f2e/activity/'+title+'.html');
+            res.end(JSON.stringify({success: 1,url: 'http://assets.showjoy.net/activity/'+ title +'.html'}));
         }
     });
 });

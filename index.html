@@ -104,6 +104,7 @@
 </div>
 
 
+<!--
 
 <div class="lyrow">
 	<a href="javascript:void 0;" class="remove label label-danger"><i class="glyphicon-remove glyphicon"></i> 删除</a>
@@ -185,6 +186,7 @@
 		</div>
 	</div>
 </div>
+-->
 
 
 </li>
@@ -199,12 +201,16 @@
  </div>
 </li>
 
-<li class="boxes" id="elmComponents">
+<li class="boxes">
+	<label for="searchItem">搜索模块</label>
+	<input type="text" id="searchItem" name="searchItem" class="form-control" placeholder="输入模块名称">
+</li>
 
+<li class="boxes" id="elmComponents" class="clearfix">
 	<script id="joyuis" type="text/html">
 		{{each joyuis as value index}}
 
-		<div class="box box-element">
+		<div class="box box-element" name="{{value.name}}">
 			<a href="javascript:void 0;" class="editdata label label-default"><i class="glyphicon glyphicon-remove"></i> 编辑</a>
 			<a href="javascript:void 0;" class="remove label label-danger"><i class="glyphicon glyphicon-remove"></i> 删除</a>
 			<span class="drag label label-default"><i class="glyphicon glyphicon-move"></i> 拖动</span>
@@ -223,7 +229,6 @@
 			<!--jQuery中的html方法同步执行script-->
 			{{value.script}}
 		</div>
-
 		{{/each}}
 	</script>
 </li>
@@ -235,6 +240,8 @@
 	<!--内容区域 开始-->
 	<div class="demoTitle">拖拽区</div>
 	<div class="demo">
+		<label for="pageTitle">页面title：</label>
+		<input type="text" class="form-control" name="pageTitle" id="pageTitle">
 	</div>
 	<!--内容区域 结束-->
 	<div id="download-layout">
